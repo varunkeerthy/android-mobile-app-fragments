@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     tools:context=".MainActivity">
 
    <fragment
-       android:layout_width="match_parent"
+       android:layout_width="0dp"
+       android:layout_weight="2"
+       android:layout_height="match_parent"
+       class="tutorial.demo.btes.com.andoridappfragments.FoodListFragment"
+       android:id="@+id/list_frag"/>
+
+   <android.support.v7.widget.ContentFrameLayout
+       android:layout_width="0dp"
+       android:layout_weight="3"
        android:layout_height="match_parent"
        class="tutorial.demo.btes.com.andoridappfragments.MenuDetailFragment"
-       android:id="@+id/detail_frag"/>
-</android.support.constraint.ConstraintLayout>
+       android:id="@+id/fragment_container"/>
+</LinearLayout>
